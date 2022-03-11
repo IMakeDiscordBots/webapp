@@ -76,19 +76,21 @@ impl Component for Model {
     fn view(&self, ctx: &Context<Self>) -> Html {
         let link= ctx.link();
         html! {
-            <div>
-                <button onclick = {link.callback(|_| Msg::AddOne)}>{ "+1" }</button>
-                <button onclick = {link.callback(|_| Msg::AddTwo)}>{ "+2" }</button>
-                <button onclick = {link.callback(|_| Msg::AddThree)}>{ "+3" }</button>
-                <button onclick = {link.callback(|_| Msg::AddFour)}>{ "+4" }</button>
-                <button onclick = {link.callback(|_| Msg::AddFive)}>{ "+5" }</button>
-                <button onclick = {link.callback(|_| Msg::AddSix)}>{ "+6" }</button>
-                <button onclick = {link.callback(|_| Msg::AddSeven)}>{ "+7" }</button>
-                <button onclick = {link.callback(|_| Msg::AddEight)}>{ "+8" }</button>
-                <button onclick = {link.callback(|_| Msg::AddNine)}>{ "+9" }</button>
-                <button onclick = {link.callback(|_| Msg::AddTen)}>{ "+10" }</button>
-                <p>{ self.value }</p>
-            </div>
+            <>
+                <div>
+                    <button onclick = {link.callback(|_| Msg::AddOne)}>{ "+1" }</button>
+                    <button onclick = {link.callback(|_| Msg::AddTwo)}>{ "+2" }</button>
+                    <button onclick = {link.callback(|_| Msg::AddThree)}>{ "+3" }</button>
+                    <button onclick = {link.callback(|_| Msg::AddFour)}>{ "+4" }</button>
+                    <button onclick = {link.callback(|_| Msg::AddFive)}>{ "+5" }</button>
+                    <button onclick = {link.callback(|_| Msg::AddSix)}>{ "+6" }</button>
+                    <button onclick = {link.callback(|_| Msg::AddSeven)}>{ "+7" }</button>
+                    <button onclick = {link.callback(|_| Msg::AddEight)}>{ "+8" }</button>
+                    <button onclick = {link.callback(|_| Msg::AddNine)}>{ "+9" }</button>
+                    <button onclick = {link.callback(|_| Msg::AddTen)}>{ "+10" }</button>
+                    <p>{ self.value }</p>
+                </div>
+            </>
         }
     }
 }
